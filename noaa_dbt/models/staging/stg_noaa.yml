@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_noaa
+    description: "Staged NOAA weather data, cleaned and typed"
+    columns:
+      - name: STATION
+        tests:
+          - not_null
+      - name: DATE
+        tests:
+          - not_null
+      - name: COUNTRY
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['US', 'CA', 'UK', 'FR', 'GM', 'JA', 'IN', 'BR', 'AU', 'SZ']
+      - name: TEMP_C
+        tests:
+          - not_null

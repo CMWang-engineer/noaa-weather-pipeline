@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: noaa_weather
+    project: global-pagoda-491010-v2
+    dataset: noaa_weather
+    tables:
+      - name: noaa_partitioned
